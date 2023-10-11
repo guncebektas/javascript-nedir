@@ -655,39 +655,39 @@ you shout when reading code](https://www.osnews.com/images/comics/wtfm.jpg)
 ## Temiz Kodlama Örnekleri
 
 ### İsimlendirme
-Kötü:
+👎Kötü:
 ```javascript
 const yyyymmdstr = moment().format("YYYY/MM/DD");
 ```
-İyi:
+👍İyi:
 ```javascript
 const currentDate = moment().format("YYYY/MM/DD");
 ```
 ------
-Kötü:
+👎Kötü:
 ```javascript
 getUserInfo();
 getClientData();
 getCustomerRecord();
 ```
-İyi:
+👍İyi:
 ```javascript
 getUser();
 ```
 ------
-Kötü:
+👎Kötü:
 ```javascript
 // 86400000 ne...?
 setTimeout(blastOff, 86400000);
 ```
-İyi:
+👍İyi:
 ```javascript
 // Aaaa 1 günmüş
 const MILLISECONDS_PER_DAY = 60 * 60 * 24 * 1000; //86400000;
 setTimeout(blastOff, MILLISECONDS_PER_DAY);
 ```
 ------
-Kötü:
+👎Kötü:
 ```javascript
 const locations = ["Austin", "New York", "San Francisco"];
 locations.forEach(l => {
@@ -700,7 +700,7 @@ locations.forEach(l => {
   dispatch(l);
 });
 ```
-İyi:
+👍İyi:
 ```javascript
 const locations = ["Austin", "New York", "San Francisco"];
 locations.forEach(location => {
@@ -713,7 +713,7 @@ locations.forEach(location => {
 });
 ```
 ------
-Kötü:
+👎Kötü:
 ```javascript
 const Car = {
   carMake: "Honda",
@@ -725,7 +725,7 @@ function paintCar(car, color) {
   car.carColor = color;
 }
 ```
-İyi:
+👍İyi:
 ```javascript
 const Car = {
   make: "Honda",
@@ -750,7 +750,7 @@ Bu, yazılım mühendisliğindeki en önemli kuraldır. Fonksiyonlar birden fazl
 
 Tek bir parametre alması o fonksiyonu kusursuz yapmaz. Örneğin;
 
-Kötü:
+👎Kötü:
 ```javascript
 function emailClients(clients) {
   clients.forEach(client => {
@@ -761,7 +761,7 @@ function emailClients(clients) {
   });
 }
 ```
-İyi:
+👍İyi:
 ```javascript
 function emailActiveClients(clients) {
   clients.filter(isActiveClient).forEach(email);
@@ -774,7 +774,7 @@ function isActiveClient(client) {
 ```
 Kötü olarak yazılmış fonksiyon tek parametre almasına rağmen birden fazla iş yapmaktadır.
 
-Kötü:
+👎Kötü:
 ```javascript
 function addToDate(date, month) {
   // ...
@@ -785,7 +785,7 @@ const date = new Date();
 // Ne yaptığını anlamak imkansız
 addToDate(date, 1);
 ```
-İyi:
+👍İyi:
 ```javascript
 function addMonthToDate(month, date) {
   // ...
@@ -796,7 +796,7 @@ addMonthToDate(1, date);
 ```
 
 #### Fonskiyonlar Boolean Parametre Almamalıdır
-Kötü:
+👎Kötü:
 ```javascript
 function createFile(name, temp) {
   if (temp) {
@@ -806,7 +806,7 @@ function createFile(name, temp) {
   }
 }
 ```
-İyi:
+👍İyi:
 ```javascript
 function createFile(name) {
   fs.create(name);
@@ -821,14 +821,14 @@ function createTempFile(name) {
 Buraya bir PR yapıp git konusunda öğrendiklerini pekiştirebilirsin.
 
 ### Global'lerden Kaçınılmalıdır
-Kötü:
+👎Kötü:
 ```javascript
 Array.prototype.diff = function diff(comparisonArray) {
   const hash = new Set(comparisonArray);
   return this.filter(elem => !hash.has(elem));
 };
 ```
-İyi:
+👍İyi:
 ```javascript
 class SuperArray extends Array {
   diff(comparisonArray) {
@@ -843,7 +843,7 @@ class SuperArray extends Array {
 ### Kullanılmayan Kodlar Silinmelidir
 
 ### Class Kullanmak Tercih Edilmelidir
-Kötü:
+👎Kötü:
 ```javascript
 const Animal = function(age) {
   if (!(this instanceof Animal)) {
@@ -881,7 +881,7 @@ Human.prototype = Object.create(Mammal.prototype);
 Human.prototype.constructor = Human;
 Human.prototype.speak = function speak() {};
 ```
-İyi:
+👍İyi:
 ```javascript
 class Animal {
   constructor(age) {
@@ -918,7 +918,7 @@ class Human extends Mammal {
 
 
 ### Akıcı Desenler (Chaining) Kullanmak Tercih Edilmelidir
-Kötü:
+👎Kötü:
 ```javascript
 class Car {
   constructor(make, model, color) {
@@ -948,7 +948,7 @@ const car = new Car("Ford", "F-150", "red");
 car.setColor("pink");
 car.save();
 ```
-İyi:
+👍İyi:
 ```javascript
 class Car {
   constructor(make, model, color) {
