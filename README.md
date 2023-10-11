@@ -211,7 +211,7 @@ for (let eleman of dizi) {
 
 Elbette, işte 5. slaytın Markdown formatında oluşturulmuş hali:
 
-# 5. Fonksiyonlar ```f(x) = y```
+# 5. Fonksiyonlar ```f(x)=x+1```
 
 ## Fonksiyon Tanımlama
 
