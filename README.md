@@ -1015,7 +1015,23 @@ const car = new Car("Ford", "F-150", "red").setColor("pink").save();
 
 > Eğer kodunuzu temiz yazarsanız dökümantasyonunuzu daha sade tutabilirsiniz.
 
-## jsDoc Kullanımı
+## JSDoc: JavaScript Kod Belgelendirme Aracı Kullanımı ```Arap misali```
+
+JSDoc, JavaScript kodlarına eklenen özel yorum etiketleri ve syntax kullanarak, kodun belgelenmesini ve otomatik belge oluşturmayı sağlayan bir belgeleme aracıdır. Bu belgeleme, kodun daha anlaşılır ve yönetilebilir olmasını sağlar ve diğer geliştiricilerin veya ekiplerin kodu daha iyi anlamasına yardımcı olur.
+
+### Faydaları
+
+1. **Otomatik Belgelendirme**: JSDoc, kodunuzu otomatik olarak belgelendirmenizi sağlar. Bu belgeler, fonksiyonların, metodların, değişkenlerin, sınıfların, modüllerin ve diğer kod yapılarının ne işe yaradığı, nasıl kullanılacağı ve ne tür verileri alıp döndüreceği gibi bilgileri içerir.
+
+2. **Kodun Anlaşılabilirliği**: Kod içerisine eklenen açıklamalar sayesinde, kodunuzun amacı ve nasıl çalıştığı hakkında daha fazla bilgi sağlarsınız. Bu, diğer geliştiricilerin veya sizin, kodunuzu daha hızlı ve doğru bir şekilde anlamanıza yardımcı olur.
+
+3. **IDE Desteği**: JSDoc, modern geliştirme ortamlarında (IDE'ler) desteklenir ve bu ortamlarda kodunuzu yazarken veya kullanırken belge bilgilerine erişmenizi sağlar. Bu, hızlı ve doğru kod yazmanıza yardımcı olabilir.
+
+4. **Test Yazma Kolaylığı**: JSDoc belgeleri, kodunuzu test etmeyi ve test senaryolarını hazırlamayı kolaylaştırır. Fonksiyonların ve metodların ne tür parametreleri beklediğini, ne tür değerler döndürdüğünü ve hangi türde hatalar fırlatabileceğini bilerek daha etkili testler oluşturabilirsiniz.
+
+5. **Entegrasyon ve Paylaşım**: JSDoc belgeleri, kodunuzu başkalarıyla paylaşırken veya projenizin dökümantasyonunu hazırlarken büyük öneme sahiptir. Projelerinizi paylaşırken veya kendi ekibinizle çalışırken, kodun nasıl kullanılacağı ve ne tür çıktılar beklenileceği gibi konularda rehberlik sağlar.
+
+
 ```javascript
 /**
  * Bu fonksiyon, verilen iki sayıyı toplayarak sonucu döndürür.
