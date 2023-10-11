@@ -609,6 +609,12 @@ Template.body.events({
 
 # 13. Temiz Kodlama Prensipleri (Clean Code)
 
+Her satır bir kez yazılır ancak onlarca kez okunur, binlerce kez derlenir. Okuyanın rahat etmesi için aynı bir kitap yazar gibi dikkatli yazın!
+
+> Türkçe bu konuda harika bir iş çıkartmış. Yazılımcı! Yazın arkadaşlar, güzel yazın!
+
+Unutma her kodu en az iki kişi yazar! Biri sen biri ise geçmişteki sen!
+
 ## SOLID Prensipleri
 
 ### 1. Tek Sorumluluk Prensibi (Single Responsibility Principle - SRP)
